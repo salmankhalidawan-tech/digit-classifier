@@ -1,0 +1,142 @@
+:root {
+    --bg-color: #ffffff;
+    --text-primary: #000000;
+    --text-secondary: #666666;
+    --border-color: #000000;
+    --hover-bg: #f0f0f0;
+}
+
+body {
+    margin: 0;
+    padding: 2rem 1rem;
+    font-family: -apple-system, "Segoe UI", Inter, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.02em;
+}
+
+header p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+canvas {
+    border: 1px solid var(--border-color);
+    background-color: #ffffff;
+    cursor: crosshair;
+    touch-action: none;
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+button {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s ease, background-color 0.2s ease;
+    border-radius: 0;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.btn-outline:hover {
+    background: var(--hover-bg);
+}
+
+.btn-solid {
+    background: var(--text-primary);
+    border: 1px solid var(--border-color);
+    color: var(--bg-color);
+}
+
+.btn-solid:hover {
+    opacity: 0.85;
+}
+
+.results {
+    transition: opacity 0.3s ease;
+}
+
+.prediction-display h2 {
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin: 0 0 1.5rem 0;
+}
+
+#predictedDigit {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.confidence-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.chart-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.875rem;
+}
+
+.digit-label {
+    width: 1rem;
+    text-align: right;
+    font-weight: 500;
+}
+
+.bar-container {
+    flex: 1;
+    height: 16px;
+    background-color: #f5f5f5;
+    position: relative;
+}
+
+.bar-fill {
+    height: 100%;
+    background-color: #000000;
+    width: 0%;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.conf-value {
+    width: 3rem;
+    text-align: right;
+    color: var(--text-secondary);
+}

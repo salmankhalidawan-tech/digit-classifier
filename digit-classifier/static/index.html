@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digit Classifier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Digit Classifier</h1>
+            <p>Draw a single digit (0-9) below.</p>
+        </header>
+
+        <main>
+            <div class="canvas-container">
+                <canvas id="drawCanvas" width="280" height="280"></canvas>
+            </div>
+            
+            <div class="controls">
+                <button id="clearBtn" class="btn-outline">Clear</button>
+                <button id="predictBtn" class="btn-solid">Predict</button>
+            </div>
+
+            <div class="results" id="resultsSection" style="opacity: 0;">
+                <div class="prediction-display">
+                    <h2>Prediction: <span id="predictedDigit">-</span></h2>
+                </div>
+                
+                <div class="confidence-chart" id="confidenceChart">
+                    <!-- Bars injected via JS -->
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
